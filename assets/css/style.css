@@ -30,6 +30,7 @@
 .mainChat {
   width: 70%;
   height: 100%;
+  background-image: url("../img/mine.jpg");
 }
 
 .userProfile {
@@ -38,6 +39,8 @@
   align-items: center;
   background-color: lightgray;
   padding: 5px;
+  height: 8%;
+  border-right: 1px solid black;
 }
 
 .userProfile i {
@@ -67,12 +70,19 @@
   padding: 10px;
 }
 
-.noticeBell i {
-  padding: 15px;
-  background-color: white;
+.bellContainer{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
+  background-color: white;
+  margin-right: 5px;
+}
+
+.noticeBell i {
   font-size: 1.3rem;
-  margin-right: 10px;
   color: lightblue;
 }
 
@@ -106,4 +116,81 @@
 .lastMessage{
   font-size: 0.8rem;
   color: lightgray;
+}
+
+.lastTime div{
+  color: lightgray;
+  padding: 1px;
+  font-size: 0.8rem;
+}
+
+.userChat{
+  height: 8%;
+  background-color: lightgray;
+}
+
+.imageEinfo img{
+  width: 9%;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* MESSAGE CHAT */
+
+.message{
+  height: 85%;
+}
+
+.userMessageStart{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+
+.userMessageEnd{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  padding-top: 2rem;
+}
+
+.userMessageE{
+  padding: 0.5rem;
+  background-color: rgb(176, 225, 176);
+  border-radius: 10px;
+}
+
+.userMessageS{
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.timeMessage{
+  font-size: 0.7rem;
+  color: gray;
+}
+
+/* FOOTER MESSAGE PART */
+
+.new-message{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7%;
+  background-color: lightgray;
+}
+
+.new-message input {
+  width: 1000px;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+}
+
+.new-message i{
+  pa
 }

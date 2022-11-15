@@ -35,34 +35,83 @@
           </div>
           <!-- SECTION PROFILE USER  -->
           <div class="noticeBell">
-            <i class="fa-solid fa-bell-slash"></i>
+            <div class="bellContainer"><i class="fa-solid fa-bell-slash"></i></div>
             <div class="">
-                <h5>Ricevi notifiche di nuovi messaggi</h5>
-                <a href="">Attiva notifiche desktop</a>
+              <h5>Ricevi notifiche di nuovi messaggi</h5>
+              <a href="">Attiva notifiche desktop</a>
             </div>
           </div>
           <!-- NOTICE SECTION DONE -->
           <div class="input-group input-group-sm p-2">
-            <button class="input-group-text px-3"  id="inputGroup-sizing-sm"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <button class="input-group-text px-3" id="inputGroup-sizing-sm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="text"
+              placeholder="Cerca o inizia una nuova chat"
+              class="form-control"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-sm"
+            />
           </div>
           <div class="listOfUser">
             <div class="newUserInfo">
               <div class="d-flex">
-              <img src="assets/img/avatar_1.jpg" alt="">
-              <div>
-                <div>name</div>
-                <div class="lastMessage">ultimo messaggio</div>
+                <img src="assets/img/avatar_1.jpg" alt="" />
+                <div>
+                  <div>name</div>
+                  <div class="lastMessage">ultimo messaggio</div>
+                </div>
               </div>
-             </div>
             </div>
-             
-             <div class="lastTime">
-              
+            <div class="lastTime">
+              <div>12:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="mainChat">
+          <div class="userChat">
+            <div class="imageEinfo d-flex align-items-center justify-content-between p-1">
+              <div class="d-flex">
+                <img src="assets/img/avatar_1.jpg" alt="" />
+                <div>
+                  <h5 class="mb-0">Nome</h5>
+                  <div class="text-secondary">Ultimo accesso oggi alle 12:00</div>
+                </div>
+              </div>
+
+              <div class="text-secondary">
+                <i class="fa-solid fa-magnifying-glass px-2"></i>
+                <i class="fa-solid fa-paperclip px-2"></i>
+                <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+              </div>
+            </div>
+          </div>
+          <!-- END CHAT HEADER -->
+          <div class="message">
+            <div class="userMessageEnd">
+             <div class="userMessageE">
+              hai comprato il Latte?
+              <div class="text-end timeMessage">12:00</div>
              </div>
           </div>
+          <div class="userMessageStart">
+              <div class="userMessageS">
+               hai comprato la marmitta?
+               <div class="text-end timeMessage">12:00</div>
+              </div>
+            </div>
+        </div>
+        <div class="new-message">
+          <div>
+            <i class="fa-regular fa-face-smile px-3 fs-4 text-secondary"></i>
+          </div>
+          <div>
+            <input type="text" placeholder="Scrivi un messaggio" />
+          </div>
+          <div><i class="fa-solid fa-microphone px-3 fs-4 text-secondary"></i></div>
+        </div>
       </div>
-      <div class="mainChat"></div>
     </div>
 
     <script
