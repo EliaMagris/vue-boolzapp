@@ -20,7 +20,6 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body>
     <div id="root" class="vh">
       <div class="mainContainer">
@@ -54,8 +53,8 @@
               aria-describedby="inputGroup-sizing-sm"
             />
           </div>
-            <!-- USER LIST -->
-          <div v-for="(name, index) in contacts" class="listOfUser">
+          <!-- USER LIST -->
+          <div v-for="(name, index) in contacts"  class="listOfUser">
             <div class="newUserInfo my-1">
               <div class="d-flex">
                 <img :src="'./assets/img/avatar' + contacts[index].avatar" alt="" />
@@ -79,7 +78,7 @@
               <div class="d-flex">
                 <img src="assets/img/avatar_1.jpg" alt="" />
                 <div>
-                  <h5 class="mb-0">Nome</h5>
+                  <h5 class="mb-0">{{contacts[0].name}}</h5>
                   <div class="text-secondary">Ultimo accesso oggi alle 12:00</div>
                 </div>
               </div>
@@ -94,30 +93,30 @@
           <!-- END CHAT HEADER -->
           <div class="message">
             <div class="userMessageEnd">
-             <div class="userMessageE">
-              hai comprato il Latte?
-              <div class="text-end timeMessage">12:00</div>
-             </div>
-          </div>
-          <div class="userMessageStart">
-              <div class="userMessageS">
-               hai comprato la marmitta?
-               <div class="text-end timeMessage">12:00</div>
+              <div class="userMessageE">
+                hai comprato il Latte?
+                <div class="text-end timeMessage">12:00</div>
               </div>
             </div>
-        </div>
-        <div class="new-message">
-          <div>
-            <i class="fa-regular fa-face-smile px-3 fs-4 text-secondary"></i>
+            <div class="userMessageStart">
+              <div class="userMessageS">
+                hai comprato la marmitta?
+                <div class="text-end timeMessage">12:00</div>
+              </div>
+            </div>
           </div>
-          <div>
-            <input type="text" placeholder="Scrivi un messaggio" />
+          <div class="new-message">
+            <div>
+              <i class="fa-regular fa-face-smile px-3 fs-4 text-secondary"></i>
+            </div>
+            <div>
+              <input type="text" placeholder="Scrivi un messaggio" />
+            </div>
+            <div><i class="fa-solid fa-microphone px-3 fs-4 text-secondary"></i></div>
           </div>
-          <div><i class="fa-solid fa-microphone px-3 fs-4 text-secondary"></i></div>
         </div>
       </div>
     </div>
-
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
