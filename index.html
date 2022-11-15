@@ -54,12 +54,13 @@
               aria-describedby="inputGroup-sizing-sm"
             />
           </div>
-          <div class="listOfUser">
-            <div class="newUserInfo">
+            <!-- USER LIST -->
+          <div v-for="(name, index) in contacts" class="listOfUser">
+            <div class="newUserInfo my-1">
               <div class="d-flex">
-                <img src="assets/img/avatar_1.jpg" alt="" />
+                <img :src="'./assets/img/avatar' + contacts[index].avatar" alt="" />
                 <div>
-                  <div>name</div>
+                  <div>{{contacts[index].name}}</div>
                   <div class="lastMessage">ultimo messaggio</div>
                 </div>
               </div>
@@ -69,6 +70,9 @@
             </div>
           </div>
         </div>
+
+        <!-- END LEFT PART -->
+
         <div class="mainChat">
           <div class="userChat">
             <div class="imageEinfo d-flex align-items-center justify-content-between p-1">
