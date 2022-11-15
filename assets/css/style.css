@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+.vh {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(245, 245, 220, 1) 86%, rgba(0, 140, 119, 1) 86%);
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  width: 85%;
+  background-color: white;
+  height: 90%;
+  display: flex;
+}
+
+.listContact {
+  width: 30%;
+  height: 100%;
+}
+
+.mainChat {
+  width: 70%;
+  height: 100%;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 5px;
+}
+
+.userProfile i {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.userProfile img {
+  width: 15%;
+  border-radius: 50px;
+}
+
+.iconUser {
+  width: 30%;
+}
+
+.iconUser i {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.3rem;
+}
+
+.noticeBell {
+  display: flex;
+  align-items: center;
+  background-color: rgb(142, 142, 223);
+  padding: 10px;
+}
+
+.noticeBell i {
+  padding: 15px;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  color: lightblue;
+}
+
+.noticeBell a {
+  color: lightgray;
+}
+
+.fa-magnifying-glass {
+  background-color: lightgray;
+}
+
+.newUserInfo img {
+  width: 13%;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.newUserInfo {
+  display: flex;
+}
+
+.listOfUser:hover {
+  background-color: rgb(133, 128, 128);
+}
+
+.listOfUser {
+  display: flex;
+}
+
+
+.lastMessage{
+  font-size: 0.8rem;
+  color: lightgray;
+}
