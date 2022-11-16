@@ -42,10 +42,11 @@
           </div>
           <!-- NOTICE SECTION DONE -->
           <div class="input-group input-group-sm p-2">
-            <button class="input-group-text px-3" id="inputGroup-sizing-sm">
+            <button @click="searchName" class="input-group-text px-3" id="inputGroup-sizing-sm">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <input
+              v-model="search"
               type="text"
               placeholder="Cerca o inizia una nuova chat"
               class="form-control"
