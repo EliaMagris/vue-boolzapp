@@ -1,192 +1,191 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: sans-serif;
-  }
-  
-  .vh {
-    height: 100vh;
-    background: linear-gradient(0deg, rgba(245, 245, 220, 1) 86%, rgba(0, 140, 119, 1) 86%);
-    display: flex;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mainContainer {
-    width: 85%;
-    background-color: white;
-    height: 90%;
-    display: flex;
-  }
-  
-  .listContact {
-    width: 30%;
-    height: 100%;
-  }
-  
-  .mainChat {
-    width: 70%;
-    height: 100%;
-    background-image: url('../img/mine.jpg');
-  }
-  
-  .userProfile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: lightgray;
-    padding: 5px;
-    height: 8%;
-    border-right: 1px solid black;
-  }
-  
-  .userProfile i {
-    font-size: 1.5rem;
-    color: gray;
-  }
-  
-  .userProfile img {
-    width: 15%;
-    border-radius: 50px;
-  }
-  
-  .iconUser {
-    width: 30%;
-  }
-  
-  .iconUser i {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1.3rem;
-  }
-  
-  .noticeBell {
-    display: flex;
-    align-items: center;
-    background-color: rgb(142, 142, 223);
-    padding: 10px;
-  }
-  
-  .bellContainer {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    background-color: white;
-    margin-right: 5px;
-  }
-  
-  .noticeBell i {
-    font-size: 1.3rem;
-    color: lightblue;
-  }
-  
-  .noticeBell a {
-    color: lightgray;
-  }
-  
-  .fa-magnifying-glass {
-    background-color: lightgray;
-  }
-  
-  .newUserInfo img {
-    width: 13%;
-    border-radius: 50px;
-    padding: 5px;
-  }
-  
-  .newUserInfo {
-    display: flex;
-  }
-  
-  .listOfUser:hover {
-    background-color: rgb(133, 128, 128);
-  }
-  
-  .listOfUser {
-    display: flex;
-  }
-  
-  .lastMessage {
-    font-size: 0.8rem;
-    color: lightgray;
-  }
-  
-  .lastTime div {
-    color: lightgray;
-    padding: 1px;
-    font-size: 0.8rem;
-    text-align: end;
-  }
-  
-  .userChat {
-    height: 8%;
-    background-color: lightgray;
-  }
-  
-  .imageEinfo img {
-    width: 9%;
-    border-radius: 50%;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  
-  /* MESSAGE CHAT */
-  
-  .message {
-    height: 85%;
-  }
-  
-  .userMessageStart {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 5rem;
-    padding-top: 2rem;
-  }
-  
-  .userMessageEnd {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 5rem;
-    padding-top: 2rem;
-  }
-  
-  .userMessageS {
-    padding: 0.5rem;
-    background-color: rgb(176, 225, 176);
-    border-radius: 10px;
-  }
-  
-  .userMessageR {
-    padding: 0.5rem;
-    border-radius: 10px;
-    background-color: white;
-  }
-  
-  .timeMessage {
-    font-size: 0.7rem;
-    color: gray;
-  }
-  
-  /* FOOTER MESSAGE PART */
-  
-  .new-message {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7%;
-    background-color: lightgray;
-  }
-  
-  .new-message input {
-    width: 1000px;
-    border-radius: 5px;
-    border: 0;
-    padding: 10px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+
+.vh {
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(245, 245, 220, 1) 86%, rgba(0, 140, 119, 1) 86%);
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  width: 85%;
+  background-color: white;
+  height: 90%;
+  display: flex;
+}
+
+.listContact {
+  width: 30%;
+  height: 100%;
+}
+
+.mainChat {
+  width: 70%;
+  height: 100%;
+  background-image: url('../img/mine.jpg');
+}
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 5px;
+  height: 8%;
+  border-right: 1px solid black;
+}
+
+.userProfile i {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.userProfile img {
+  width: 15%;
+  border-radius: 50px;
+}
+
+.iconUser {
+  width: 30%;
+}
+
+.iconUser i {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.3rem;
+}
+
+.noticeBell {
+  display: flex;
+  align-items: center;
+  background-color: rgb(142, 142, 223);
+  padding: 10px;
+}
+
+.bellContainer {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: white;
+  margin-right: 5px;
+}
+
+.noticeBell i {
+  font-size: 1.3rem;
+  color: lightblue;
+}
+
+.noticeBell a {
+  color: lightgray;
+}
+
+.fa-magnifying-glass {
+  background-color: lightgray;
+}
+
+.newUserInfo img {
+  width: 13%;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.newUserInfo {
+  display: flex;
+}
+
+.listOfUser:hover {
+  background-color: rgb(133, 128, 128);
+}
+
+.listOfUser {
+  display: flex;
+}
+
+.lastMessage {
+  font-size: 0.8rem;
+  color: lightgray;
+}
+
+.lastTime div {
+  color: lightgray;
+  padding: 1px;
+  font-size: 0.8rem;
+  text-align: end;
+}
+
+.userChat {
+  height: 8%;
+  background-color: lightgray;
+}
+
+.imageEinfo img {
+  width: 9%;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* MESSAGE CHAT */
+
+.message {
+  height: 85%;
+}
+
+.userMessageStart {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+
+.userMessageEnd {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  padding-top: 2rem;
+}
+
+.userMessageS {
+  padding: 0.5rem;
+  background-color: rgb(176, 225, 176);
+  border-radius: 10px;
+}
+
+.userMessageR {
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.timeMessage {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+/* FOOTER MESSAGE PART */
+
+.new-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7%;
+  background-color: lightgray;
+}
+
+.new-message input {
+  width: 1000px;
+  border-radius: 5px;
+  border: 0;
+  padding: 10px;
+}

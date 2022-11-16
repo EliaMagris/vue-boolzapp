@@ -93,8 +93,12 @@
             </div>
           </div>
           <!-- END CHAT HEADER -->
-          <div class="message">
-            <div v-for="(element, index) in contacts[currentUser].messages" :class="(element.status == 'sent') ? 'userMessageEnd' : 'userMessageStart' " class="">
+          <div class="message overflow-auto">
+            <div
+              v-for="(element, index) in contacts[currentUser].messages"
+              :class="(element.status == 'sent') ? 'userMessageEnd' : 'userMessageStart' "
+              class=""
+            >
               <div :class="(element.status == 'sent') ? 'userMessageS' : 'userMessageR' " class="">
                 {{element.message}}
                 <div class="text-end timeMessage">12:00</div>
@@ -106,9 +110,11 @@
               <i class="fa-regular fa-face-smile px-3 fs-4 text-secondary"></i>
             </div>
             <div>
-              <input type="text" placeholder="Scrivi un messaggio" />
+              <input type="text" v-model="text" v-on:keyup.enter="addMessage" placeholder="Scrivi un messaggio" />
             </div>
-            <div><i class="fa-solid fa-microphone px-3 fs-4 text-secondary"></i></div>
+            <button class="border-0 .bg-transparent" @click="addMessage()">
+              <i class="fa-solid fa-microphone px-3 fs-4 text-secondary .bg-transparent"></i>
+            </button>
           </div>
         </div>
       </div>
