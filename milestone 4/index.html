@@ -46,6 +46,7 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <input
+              v-on:keyup="searchName()"
               v-model="search"
               type="text"
               placeholder="Cerca o inizia una nuova chat"
@@ -55,7 +56,12 @@
             />
           </div>
           <!-- USER LIST -->
-          <div v-for="(element, index) in contacts" @click="selectUser(index)" class="listOfUser">
+          <div
+            v-for="(element, index) in contacts"
+            v-if="(element.visible == true)"
+            @click="selectUser(index)"
+            class="listOfUser"
+          >
             <div class="newUserInfo my-1">
               <div class="d-flex">
                 <img :src="'./assets/img/avatar' + contacts[index].avatar" alt="" />

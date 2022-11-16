@@ -169,7 +169,6 @@ var app = new Vue({
     search: '',
   },
 
-
   methods: {
     selectUser(index) {
       this.currentUser = index;
@@ -191,8 +190,22 @@ var app = new Vue({
       });
     },
 
-    searchName(){
-       this.contact.name.toLowerCase().includes(this.search.toLowerCase());
-    }
+    searchName() {
+      this.contacts.forEach((element, index) => {
+        if (element == this.search) {
+          this.contacts[index].visible = true;
+        } else {
+          if (
+            (element.name.includes(this.search) ||
+            element.name.toLowerCase().includes(this.search) ||
+            element.name.toUpperCase().includes(this.search))
+          ) {
+            element.visible = true;
+          } else {
+            element.visible = false;
+          }
+        }
+      });
+    },
   },
 });
