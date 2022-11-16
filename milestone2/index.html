@@ -60,7 +60,9 @@
                 <img :src="'./assets/img/avatar' + contacts[index].avatar" alt="" />
                 <div>
                   <div>{{element.name}}</div>
-                  <div class="lastMessage"><element class="message">{{element.messages[element.messages.length - 1].message}}</element></div>
+                  <div class="lastMessage">
+                    <element class="message">{{element.messages[element.messages.length - 1].message}}</element>
+                  </div>
                 </div>
               </div>
             </div>
@@ -72,14 +74,14 @@
 
         <!-- END LEFT PART -->
 
-        <div  class="mainChat">
-          <div  class="userChat">
+        <div class="mainChat">
+          <div class="userChat">
             <div class="imageEinfo d-flex align-items-center justify-content-between p-1">
               <div class="d-flex">
-                <img src="''./assets/img/avatar' + contacts[currentUser].avatar" alt="" />
+                <img :src="'./assets/img/avatar' + contacts[currentUser].avatar" alt="" />
                 <div>
                   <h5 class="mb-0">{{contacts[currentUser].name}}</h5>
-                  <div class="text-secondary">Ultimo accesso oggi alle </div>
+                  <div class="text-secondary">Ultimo accesso oggi alle 12</div>
                 </div>
               </div>
 
@@ -92,15 +94,9 @@
           </div>
           <!-- END CHAT HEADER -->
           <div class="message">
-            <div class="userMessageEnd">
-              <div class="userMessageE">
-                hai comprato il Latte?
-                <div class="text-end timeMessage">12:00</div>
-              </div>
-            </div>
-            <div class="userMessageStart">
-              <div class="userMessageS">
-                hai comprato la marmitta?
+            <div v-for="(element, index) in contacts[currentUser].messages" :class="(element.status == 'sent') ? 'userMessageEnd' : 'userMessageStart' " class="">
+              <div :class="(element.status == 'sent') ? 'userMessageS' : 'userMessageR' " class="">
+                {{element.message}}
                 <div class="text-end timeMessage">12:00</div>
               </div>
             </div>
