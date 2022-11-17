@@ -177,20 +177,22 @@ var app = new Vue({
     getLastHourContact(element) {
       let lastDate = element.messages[element.messages.length - 1].date;
       lastDate = lastDate.split(' ');
-      return lastDate[1];
+      console.log(lastDate)
+      return lastDate[1].slice(0,5);
     },
 
     getLastHourMessage(element) {
       let date = element.date;
       date = date.split(' ');
-      return date[1];
+      console.log(date)
+      return date[1].slice(0,5);
     },
 
     addMessage() {
       let getMessage = this.contacts[this.currentUser].messages;
 
       const d = new Date();
-      let time = d.toLocaleTimeString();
+      let time = d.toLocaleTimeString().slice(0,5);
       let date = d.toLocaleTimeString();
 
       let now = `${date} ${time}`;
@@ -218,7 +220,7 @@ var app = new Vue({
       let getMessage = this.contacts[this.currentUser].messages;
 
       const d = new Date();
-      let time = d.toLocaleTimeString();
+      let time = d.toLocaleTimeString().slice(0,5);
       let date = d.toLocaleTimeString();
 
       let now = `${date} ${time}`;
