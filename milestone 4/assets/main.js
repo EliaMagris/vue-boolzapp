@@ -174,17 +174,57 @@ var app = new Vue({
       this.currentUser = index;
     },
 
-    addMessage() {
-      this.contacts[this.currentUser].messages.push({
-        message: this.text,
-        status: 'sent',
-      });
+    getLastHourContact(element) {
+      let lastDate = element.messages[element.messages.length - 1].date;
+      lastDate = lastDate.split(' ');
+      return lastDate[1];
+    },
 
-      setTimeout(this.PcMessage, 1500);
+    getLastHourMessage(element) {
+      let date = element.date;
+      date = date.split(' ');
+      return date[1];
+    },
+
+    addMessage() {
+      let getMessage = this.contacts[this.currentUser].messages;
+
+      const d = new Date();
+      let time = d.toLocaleTimeString();
+      let date = d.toLocaleTimeString();
+
+      let now = `${date} ${time}`;
+
+      if (this.text == '') {
+      } else {
+        getMessage.push({
+          date: now,
+          message: this.text,
+          status: 'sent',
+        });
+
+        setTimeout(this.PcMessage, 1500);
+      }
+    },
+
+    lastAccess() {
+      const d = new Date();
+      let time = d.toLocaleTimeString();
+      time = time.slice(0, 5);
+      return time;
     },
 
     PcMessage() {
-      this.contacts[this.currentUser].messages.push({
+      let getMessage = this.contacts[this.currentUser].messages;
+
+      const d = new Date();
+      let time = d.toLocaleTimeString();
+      let date = d.toLocaleTimeString();
+
+      let now = `${date} ${time}`;
+
+      getMessage.push({
+        date: now,
         message: 'Ok',
         status: 'received',
       });
@@ -196,9 +236,9 @@ var app = new Vue({
           this.contacts[index].visible = true;
         } else {
           if (
-            (element.name.includes(this.search) ||
+            element.name.includes(this.search) ||
             element.name.toLowerCase().includes(this.search) ||
-            element.name.toUpperCase().includes(this.search))
+            element.name.toUpperCase().includes(this.search)
           ) {
             element.visible = true;
           } else {
