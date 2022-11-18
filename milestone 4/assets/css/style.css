@@ -54,7 +54,7 @@
 }
 
 .iconUser {
-  width: 30%;
+  width: 60%;
 }
 
 .iconUser i {
@@ -184,12 +184,38 @@
 }
 
 .new-message input {
-  width: 1000px;
+  width: 100%;
   border-radius: 5px;
   border: 0;
   padding: 10px;
 }
 
+.smile-face{
+  width: 10%;
+  text-align: center;
+}
+
+.text-container{
+  width: 80%;
+}
+
+.microphone{
+  width: 10%;
+  background-color: lightgray;
+}
+
 .fa-microphone {
   background-color: rgb(211, 211, 211);
 }
+
+.dropdown{
+  display: inline-block;
+}
+
+.dropdow:hover{
+  display: none;
+}
+
+
+
+
