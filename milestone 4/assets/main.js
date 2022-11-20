@@ -232,6 +232,10 @@ var app = new Vue({
       });
     },
 
+    elementDelete(element, index){
+       this.contacts.splice(index, 1)
+    },
+
     searchName() {
       this.contacts.forEach((element, index) => {
         if (element == this.search) {
