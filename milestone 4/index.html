@@ -25,12 +25,7 @@
       <div class="mainContainer">
         <div class="listContact">
           <div class="userProfile">
-            <div>
-              <img src="assets/img/avatar_7.jpg" alt="userImage" /><span
-                class="fs-4 ps-3"
-                >Elia</span
-              >
-            </div>
+            <div><img src="assets/img/avatar_7.jpg" alt="userImage" /><span class="fs-4 ps-3">Elia</span></div>
             <div class="iconUser">
               <i class="fa-solid fa-circle-notch"></i>
               <i class="fa-solid fa-message"></i>
@@ -49,11 +44,7 @@
           </div>
           <!-- NOTICE SECTION DONE -->
           <div class="input-group input-group-sm p-2">
-            <button
-              @click="searchName"
-              class="input-group-text px-3"
-              id="inputGroup-sizing-sm"
-            >
+            <button @click="searchName" class="input-group-text px-3" id="inputGroup-sizing-sm">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <input
@@ -75,17 +66,11 @@
           >
             <div class="newUserInfo my-1">
               <div class="d-flex">
-                <img
-                  :src="'./assets/img/avatar' + contacts[index].avatar"
-                  alt=""
-                />
+                <img :src="'./assets/img/avatar' + contacts[index].avatar" alt="" />
                 <div>
                   <div>{{element.name}}</div>
                   <div class="lastMessage">
-                    <element class="message"
-                      >{{element.messages[element.messages.length -
-                      1].message}}</element
-                    >
+                    <element class="message">{{element.messages[element.messages.length - 1].message}}</element>
                   </div>
                 </div>
               </div>
@@ -100,19 +85,12 @@
 
         <div class="mainChat">
           <div class="userChat">
-            <div
-              class="imageEinfo d-flex align-items-center justify-content-between p-1"
-            >
+            <div class="imageEinfo d-flex align-items-center justify-content-between p-1">
               <div class="d-flex">
-                <img
-                  :src="'./assets/img/avatar' + contacts[currentUser].avatar"
-                  alt=""
-                />
+                <img :src="'./assets/img/avatar' + contacts[currentUser].avatar" alt="" />
                 <div>
                   <h5 class="mb-0">{{contacts[currentUser].name}}</h5>
-                  <div class="text-secondary">
-                    Ultimo accesso oggi alle {{lastAccess()}}
-                  </div>
+                  <div class="text-secondary">Ultimo accesso oggi alle {{lastAccess()}}</div>
                 </div>
               </div>
               <div class="text-secondary">
@@ -128,9 +106,7 @@
               v-for="(element, index) in contacts[currentUser].messages"
               :class="(element.status == 'sent') ? 'userMessageEnd' : 'userMessageStart' "
             >
-              <div
-                :class="(element.status == 'sent') ? 'userMessageS' : 'userMessageR' "
-              >
+              <div :class="(element.status == 'sent') ? 'userMessageS' : 'userMessageR' ">
                 {{element.message}}
                 <div class="dropdown">
                   <button
@@ -138,9 +114,7 @@
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                  >
-                    
-                  </button>
+                  ></button>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="#">info message</a></li>
                     <li>
@@ -148,9 +122,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="text-end timeMessage">
-                  {{getLastHourMessage(element)}}
-                </div>
+                <div class="text-end timeMessage">{{getLastHourMessage(element)}}</div>
               </div>
             </div>
           </div>
@@ -159,17 +131,9 @@
               <i class="fa-regular fa-face-smile px-3 fs-4 text-secondary"></i>
             </div>
             <div class="text-container">
-              <input
-                type="text"
-                v-model="text"
-                v-on:keyup.enter="addMessage"
-                placeholder="Scrivi un messaggio"
-              />
+              <input type="text" v-model="text" v-on:keyup.enter="addMessage" placeholder="Scrivi un messaggio" />
             </div>
-            <button
-              class="border-0 microphone .bg-primary"
-              @click="addMessage()"
-            >
+            <button class="border-0 microphone .bg-primary" @click="addMessage()">
               <i class="fa-solid fa-microphone px-3 fs-4 text-secondary"></i>
             </button>
           </div>
